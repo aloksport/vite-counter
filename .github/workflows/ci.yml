@@ -25,5 +25,17 @@ jobs:
       - name: Run automated tests
         run: npm test -- --run
 
+      - name: Generate coverage report
+        run: npm run test:coverage
+
       - name: Build production application
         run: npm run build
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: typescript-coverage-report
+          path: coverage/
+          if-no-files-found: ignore
+          retention-days: 7
