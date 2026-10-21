@@ -1,0 +1,103 @@
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.container {
+  width: min(900px, 92%);
+  margin: 50px auto;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.description {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+#message {
+  margin: 20px 0;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.user-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 6%);
+  overflow-wrap: anywhere;
+}
+
+.user-card h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.user-id {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+label {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+#user-search {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font: inherit;
+  background: white;
+}
+
+#user-search:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+#user-search:disabled {
+  background: #e5e7eb;
+  cursor: not-allowed;
+}
+
